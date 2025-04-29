@@ -199,25 +199,12 @@ with gr.Blocks() as demo:
 
     submit_btn = gr.Button("產生記錄")
 
-    result = gr.Textbox(label="結果（可複製）", lines=20)
-    copy_btn = gr.Button("複製結果")
+    result = gr.Textbox(label="結果（可複製）", lines=20, show_copy_button=True)
 
     # 提交按鈕事件
     submit_btn.click(
         process,
         inputs=[scene, language, text_input, audio_input],
-        outputs=[result]
-    )
-
-    # 改進複製功能 - 使用標準方法
-    def copy_text(text):
-        # 在 Gradio 中，返回相同的文本會自動更新文本框
-        # 這會觸發瀏覽器的選擇，使用戶可以手動複製
-        return text
-    
-    copy_btn.click(
-        copy_text,
-        inputs=[result],
         outputs=[result]
     )
 
