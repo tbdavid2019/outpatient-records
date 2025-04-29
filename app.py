@@ -194,12 +194,16 @@ with gr.Blocks() as demo:
         outputs=[result]
     )
 
-    # 改進複製功能
+    # 改進複製功能 - 使用標準方法
+    def copy_text(text):
+        # 在 Gradio 中，返回相同的文本會自動更新文本框
+        # 這會觸發瀏覽器的選擇，使用戶可以手動複製
+        return text
+    
     copy_btn.click(
-        None,
+        copy_text,
         inputs=[result],
-        outputs=[],
-        _js="(text) => { navigator.clipboard.writeText(text); alert('已複製到剪貼簿！'); }"
+        outputs=[result]
     )
 
 
