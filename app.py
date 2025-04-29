@@ -173,7 +173,22 @@ def process(scene, language, text_input, audio_input):
 
 
 with gr.Blocks() as demo:
-    gr.Markdown("# 🩺 醫療記錄格式產生器")
+    gr.Markdown("# 🩺 醫療記錄格式產生器  -DAVID888-")
+    
+    gr.Markdown("""
+    ## 📍 醫療記錄格式 × 場景選擇地圖
+    
+    | 場景 | 建議格式 | 為什麼用這個？ |
+    |------|----------|----------------|
+    | 🏥 一般門診看診 | SOAP | 主訴 → 檢查 → 判斷 → 計畫，結構清楚、標準化。 |
+    | 🏥 住院病人每日進度 | SOAPIER / PIE | 需要記錄更多「介入行動」、「效果評估」，所以加上 IER 或強調 Problem。 |
+    | 🚑 急診快速交班通報 | SBAR | 緊急情況下快速傳遞關鍵資訊：狀況、背景、判斷、建議。 |
+    | 👩‍⚕️ 護理紀錄（特別是照護計畫） | SOAPIER / PIE / IER | 紀錄每次處置、病人反應、是否需要修正。 |
+    | 🧠 心理諮商會談記錄 | DAP | 不強調客觀檢查，重在整理資料、評估與治療計畫。 |
+    | 🩺 慢性病、長期追蹤患者 | SOAPIER / PIE | 每次看診都要追蹤療效、修正計劃，不能只記錄新症狀。 |
+    | 📋 健檢簡單敘述、書面報告 | Narrative (自由記敘) | 沒有複雜病情，簡單描述觀察結果即可。 |
+    | 📝 個案討論/多科會診簡報 | SOAP / SBAR 混用 | 有時要結構清楚，也要快速提出重點，視需求混搭。 |
+    """)
 
     with gr.Row():
         scene = gr.Dropdown(choices=SCENARIOS, label="選擇場景", value=SCENARIOS[0] if SCENARIOS else None)
