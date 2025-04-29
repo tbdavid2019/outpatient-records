@@ -120,54 +120,6 @@ P (Plan):
 請使用 PIE 格式撰寫慢性病或長期照護記錄。
 - 明確列出 Problem, Intervention, Evaluation。
 - 無資料者請明確註記。
-
-Long-term Care Note (PIE):
-P (Problem):
-I (Intervention):
-E (Evaluation):
-
-請以 {language} 撰寫。
-以下是患者描述或觀察內容：
----
-{content}
----
-''',
-
-    "健檢簡單敘述、書面報告": '''
-請使用 Narrative（敘事）格式撰寫簡易健檢或常規健康報告。
-- 需有開頭、觀察、結語。
-- 如資料不詳，請明確說明。
-
-Health Report (Narrative):
-
-請以 {language} 撰寫以下敘述：
----
-{content}
----
-''',
-
-    "個案討論/多科會診簡報": '''
-請以 SOAP 或 SBAR 混合格式撰寫個案摘要，供會診醫師快速理解。
-- 每段皆需明列標題。
-- 不足資訊也請註明未提供。
-
-Case Summary:
-S (Subjective):
-O (Objective):
-A (Assessment):
-P (Plan):
-R (Recommendation):
-
-請以 {language} 撰寫。
-以下是個案描述：
----
-{content}
----
-''',
-"慢性病、長期追蹤患者": '''
-請使用 PIE 格式撰寫慢性病或長期照護記錄。
-- 明確列出 Problem, Intervention, Evaluation。
-- 無資料者請明確註記。
 - 記錄重點應涵蓋追蹤期間內的變化、處置與成效。
 
 Long-term Care Note (PIE):
@@ -181,7 +133,8 @@ E (Evaluation):
 {content}
 ---
 ''',
-"健檢簡單敘述、書面報告": '''
+
+    "健檢簡單敘述、書面報告": '''
 請使用 Narrative（敘事）格式撰寫簡易健檢或常規健康報告。
 - 需有開頭、觀察、結語。
 - 如資料不詳，請明確說明。
@@ -194,7 +147,8 @@ Health Report (Narrative):
 {content}
 ---
 ''',
-"個案討論/多科會診簡報": '''
+
+    "個案討論/多科會診簡報": '''
 請以 SOAP 與 SBAR 混合格式撰寫個案摘要，供多科會診使用。
 - 每段需清楚標題。
 - 如無資料請註明未提供。
