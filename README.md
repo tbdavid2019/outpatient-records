@@ -4,7 +4,7 @@ emoji: ⚡
 colorFrom: purple
 colorTo: pink
 sdk: gradio
-sdk_version: 5.27.1
+sdk_version: 6.2.0
 app_file: app.py
 pinned: false
 short_description: 病歷
@@ -100,4 +100,3 @@ python app.py
 
 本專案由 David888 製作，僅供學術研究與個人使用。
 如需商業應用，請事先取得授權。
-
