@@ -199,7 +199,7 @@ with gr.Blocks() as demo:
 
     submit_btn = gr.Button("產生記錄")
 
-    result = gr.Textbox(label="結果（可複製）", lines=20, show_copy_button=True)
+    result = gr.Textbox(label="結果（可複製）", lines=20, buttons=["copy"])
 
     # 提交按鈕事件
     submit_btn.click(
