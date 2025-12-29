@@ -1,3 +1,4 @@
+# Updated 2025-12-29 to fix show_copy_button error
 gradio>=4.0.0
 requests
 python-dotenv
